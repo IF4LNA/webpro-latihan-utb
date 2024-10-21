@@ -19,10 +19,24 @@
             border-radius: 8px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-        h1 {
+        h1, h2 {
             text-align: center;
             color: #333;
         }
+        h2 {
+            margin-top: 100px; /* Menambahkan jarak di atas h2 */
+            margin-bottom: 20px; /* Menambahkan jarak di bawah h2 */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-bottom: 20px; /* Menambahkan jarak di bawah tabel */
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
         label {
             display: block;
             margin-bottom: 8px;
@@ -159,8 +173,39 @@
 
         <!-- Tombol Submit -->
         <button type="submit">Kirim Formulir</button>
+        <h2>Daftar Mahasiswa yang Sudah Mendaftar</h2>
+
+        <!-- Tabel daftar mahasiswa -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Program Studi</th>
+                    <th>Nomor HP</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Muhammad Fajar Syaffiqri</td>
+                    <td>Teknik Informatika</td>
+                    <td>085652314598</td>
+                </tr>
+                <tr>
+                    <td>Kasep Asep</td>
+                    <td>Teknik Industri</td>
+                    <td>085652314598</td>
+                </tr>
+                <tr>
+                    <td>Deidara</td>
+                    <td>DKV</td>
+                    <td>085652314598</td>
+                </tr>
+            </tbody>
+        </table>
+
     </form>
 </div>
+
 
 </body>
 </html>
