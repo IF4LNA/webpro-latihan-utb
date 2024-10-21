@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Penerimaan Mahasiswa Baru</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="date"], input[type="tel"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group-inline {
+            display: flex;
+            align-items: center;
+        }
+        .form-group-inline label {
+            margin-right: 15px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Formulir Penerimaan Mahasiswa Baru</h1>
+    <h1>Universitas Teknologi Bandung</h1>
+    <form action="#" method="POST">
+        <!-- Data Pribadi -->
+        <div class="form-group">
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="tgl_lahir">Tanggal Lahir:</label>
+            <input type="date" id="tgl_lahir" name="tgl_lahir" required>
+        </div>
+
+        <div class="form-group">
+            <label for="jenis_kelamin">Jenis Kelamin:</label>
+            <div class="form-group-inline">
+                <input type="radio" id="laki" name="jenis_kelamin" value="Laki-laki" required>
+                <label for="laki">Laki-laki</label>
+                <input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan" required>
+                <label for="perempuan">Perempuan</label>
+            </div>
+        </div>
+
+        <!-- Alamat -->
+        <div class="form-group">
+            <label for="alamat">Alamat:</label>
+            <textarea id="alamat" name="alamat" rows="3" required></textarea>
+        </div>
+
+        <!-- No HP -->
+        <div class="form-group">
+            <label for="no_hp">No HP:</label>
+            <input type="tel" id="no_hp" name="no_hp" required pattern="[0-9]{10,13}" title="Masukkan nomor HP yang valid (10-13 digit)">
+        </div>
+
+        <!-- Nomor Induk Siswa Nasional (NISN) -->
+        <div class="form-group">
+            <label for="nisn">Nomor Induk Siswa Nasional (NISN):</label>
+            <input type="text" id="nisn" name="nisn" required pattern="[0-9]{10}" title="Masukkan 10 digit NISN">
+        </div>
+
+        <!-- Asal Sekolah -->
+        <div class="form-group">
+            <label for="asal_sekolah">Asal Sekolah:</label>
+            <input type="text" id="asal_sekolah" name="asal_sekolah" required>
+        </div>
+
+        <!-- Alamat Sekolah -->
+        <div class="form-group">
+            <label for="alamat_sekolah">Alamat Sekolah:</label>
+            <textarea id="alamat_sekolah" name="alamat_sekolah" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="program_studi">Program Studi Pilihan:</label>
+          <select id="program_studi" name="program_studi" required>
+              <option value="Teknik Informatika">Teknik Informatika</option>
+              <option value="Teknik Industri">Teknik Industri</option>
+              <option value="DKV">DKV</option>
+              <option value="Manajemen">Manajemen</option>
+          </select>
+      </div>
+
+        <!-- Minat dan Bakat -->
+        <div class="form-group">
+            <label>Ekstrakurikuler yang diminati:</label>
+            <div class="form-group-inline">
+                <input type="checkbox" id="olahraga" name="ekstrakurikuler" value="Olahraga">
+                <label for="olahraga">Olahraga</label>
+            </div>
+            <div class="form-group-inline">
+                <input type="checkbox" id="seni" name="ekstrakurikuler" value="Seni">
+                <label for="seni">Seni</label>
+            </div>
+            <div class="form-group-inline">
+                <input type="checkbox" id="musik" name="ekstrakurikuler" value="Musik">
+                <label for="musik">Musik</label>
+            </div>
+            <div class="form-group-inline">
+                <input type="checkbox" id="teater" name="ekstrakurikuler" value="Teater">
+                <label for="teater">Teater</label>
+            </div>
+        </div>
+
+        <!-- Tombol Submit -->
+        <button type="submit">Kirim Formulir</button>
+    </form>
+</div>
+
+</body>
+</html>
